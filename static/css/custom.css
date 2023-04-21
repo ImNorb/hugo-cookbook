@@ -2,3 +2,31 @@ li {
     padding-bottom: .5em;
     font-size: 20px;
 }
+
+.footer {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #eaeaea;
+    border-radius: 3%;
+}
+
+.card:hover {
+    box-shadow: 0 .5em 1em -.125em rgba(5,5,5,.1),0 0 0 2px rgba(5,5,5,.02);
+    border: 1px solid #bababa;
+}
+
+.card-image {
+    border-radius: 3%;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.card-image figure img {
+    border-radius: 3%;
+}
+
+.imgage img {
+    height: auto;
+    width: auto;
+}
