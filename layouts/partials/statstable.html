@@ -17,7 +17,7 @@
         <i class="fas fa-temperature-high fa-lg"></i>
         <div></div>
         {{ if .Params.Cook }}
-            <p class="has-text-weight-bold is-size-6">Cooking Time</p>
+            <p class="has-text-weight-bold is-size-6">Cooking</p>
         {{ else }}
             <p class="has-text-weight-bold is-size-6">Cooling Time</p>
         {{ end }}
@@ -26,6 +26,14 @@
             {{ .Params.Cook_time | default "---"}} Hours
         {{ else }}
             {{ .Params.Cook_time | default "---"}} Minutes
+        {{ end }}
+        {{ if .Params.Cook_temperature_degrees }}
+            <span>@</span>
+            {{ if eq .Params.Cook_temperature_unit "F" }}
+                {{ .Params.Cook_temperature_degrees  | default "---"}} &deg;F
+            {{ else }}
+                {{ .Params.Cook_temperature_degrees  | default "---"}} &deg;C
+            {{ end }}
         {{ end }}
     </div>
     <div class="column is-half-mobile">
